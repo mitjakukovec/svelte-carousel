@@ -259,7 +259,11 @@
 <div class="sc-carousel__carousel-container">
   <div class="sc-carousel__content-container">
     {#if arrows}
-      <slot name="prev" showPrevPage={methods.showPrevPage}>
+      <slot name="prev"
+        showPrevPage={methods.showPrevPage}
+        pagesCount={pagesCount}
+        currentPageIndex={currentPageIndex}
+      >
         <div class="sc-carousel__arrow-container">
           <Arrow
             direction="prev"
@@ -303,7 +307,11 @@
       {/if}
     </div>
     {#if arrows}
-      <slot name="next" showNextPage={methods.showNextPage}>
+      <slot name="next"
+        showNextPage={methods.showNextPage}
+        pagesCount={pagesCount}
+        currentPageIndex={currentPageIndex}
+      >
         <div class="sc-carousel__arrow-container">
           <Arrow
             direction="next"
